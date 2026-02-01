@@ -1,0 +1,2 @@
+docker exec pihole pihole -v
+docker compose up -d --force-recreate
