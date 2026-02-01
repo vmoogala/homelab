@@ -1,0 +1,21 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Home:
+    - Pi-hole:
+        icon: pi-hole.png
+        url: http://192.168.0.59/admin/
+        site: http://192.168.0.59/admin/
+        description: Network-wide ad blocker
+        widget:
+          type: pihole
+          url: http://192.168.0.59
+          key: xJSe+z5G1GrNEK9jI4CtsJ7ez2ZAjmB5OI8oSFRFRn4=
+          version: 6
+          fields:
+            - queries
+            - blocked
+            - blocked_percent
+            - gravity
+
