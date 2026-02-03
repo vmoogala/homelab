@@ -18,4 +18,5 @@
             - blocked
             - blocked_percent
             - gravity
+            - unique_clients
 
