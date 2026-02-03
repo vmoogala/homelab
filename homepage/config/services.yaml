@@ -5,13 +5,13 @@
 - Home:
     - Pi-hole:
         icon: pi-hole.png
-        url: http://192.168.0.59/admin/
-        site: http://192.168.0.59/admin/
+        url: http://192.168.0.60/admin/
+        site: http://192.168.0.60/admin/
         description: Network-wide ad blocker
         widget:
           type: pihole
-          url: http://192.168.0.59
-          key: xJSe+z5G1GrNEK9jI4CtsJ7ez2ZAjmB5OI8oSFRFRn4=
+          url: http://192.168.0.60
+          key: 4rGU0ijp9CFTy1AeoXL1RJgbSygh1ahXg2gQOBt3ckA=
           version: 6
           fields:
             - queries
