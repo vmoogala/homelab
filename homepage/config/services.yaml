@@ -2,11 +2,10 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-- Home:
+- Docker:
     - Pi-hole:
         icon: pi-hole.png
-        url: http://192.168.0.60/admin/
-        site: http://192.168.0.60/admin/
+        href: http://michaelscott.lan/admin/
         description: Network-wide ad blocker
         widget:
           type: pihole
@@ -19,4 +18,14 @@
             - blocked_percent
             - gravity
             - unique_clients
+
+    - Home Assistant:
+        icon: home-assistant.svg
+        href: http://michaelscott.lan:8123
+        widget:
+          type: homeassistant
+          url: http://192.168.0.60:8123
+          key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI5ODg0MDBiZjk3NWY0YjVhOWI5N2YzZTg4OGVlMmNkMyIsImlhdCI6MTc3MDI0OTQ2NywiZXhwIjoyMDg1NjA5NDY3fQ.DQmNXQekx0HubXwdVMQaabtWNQGgFuHAvK-FbjLBUqk
+          fields: ["people_home", "lights_on", "switches_on"]
+
 
