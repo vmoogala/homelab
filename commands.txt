@@ -3,3 +3,6 @@ docker logs -f pihole
 docker ps
 
 docker compose up -d --force-recreate
+
+
+ss -tulpn | grep 61208

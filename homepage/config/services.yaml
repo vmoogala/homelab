@@ -2,7 +2,7 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-- Docker:
+- MichaelScott:
     - Pi-hole:
         icon: pi-hole.png
         href: http://michaelscott.lan/admin/
@@ -27,5 +27,3 @@
           url: http://192.168.0.60:8123
           key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI5ODg0MDBiZjk3NWY0YjVhOWI5N2YzZTg4OGVlMmNkMyIsImlhdCI6MTc3MDI0OTQ2NywiZXhwIjoyMDg1NjA5NDY3fQ.DQmNXQekx0HubXwdVMQaabtWNQGgFuHAvK-FbjLBUqk
           fields: ["people_home", "lights_on", "switches_on"]
-
-
