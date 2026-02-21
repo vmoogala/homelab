@@ -2,16 +2,7 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-- MichaelScott:
-
-    - Home Assistant:
-        icon: home-assistant.svg
-        href: "http://{{HOMEPAGE_VAR_MICHAEL_SCOTT}}:8123"
-        widget:
-          type: homeassistant
-          url: "http://{{HOMEPAGE_VAR_MICHAEL_SCOTT}}:8123"
-          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_TOKEN}}"
-          fields: ["people_home", "lights_on", "switches_on"]
+#- MichaelScott:
 
 
 - CosmoKramer:
@@ -30,3 +21,14 @@
             - blocked_percent
             - gravity
             - unique_clients
+
+
+    - Home Assistant:
+        icon: home-assistant.svg
+        href: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8123"
+        widget:
+          type: homeassistant
+          url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8123"
+          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_TOKEN}}"
+          fields: ["people_home", "lights_on", "switches_on"]
+
