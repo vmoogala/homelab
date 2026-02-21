@@ -11,7 +11,7 @@
     cache: 5
 
 - glances:
-    # label: scott
+    label: cosmokramer
     url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:61208"
     version: 3
     cpu: true
@@ -19,5 +19,18 @@
     mem: true
     disk: /rootfs
     uptime: true
-      #network: true
-      #expanded: true
+    network: true
+    expanded: true
+      
+- glances:
+    label: michaelscott
+    url: "http://{{HOMEPAGE_VAR_MICHAEL_SCOTT}}:61208"
+    version: 3
+    cpu: true
+    cputemp: true
+    mem: true
+    disk: /rootfs
+    uptime: true
+    network: true
+    expanded: true
+
