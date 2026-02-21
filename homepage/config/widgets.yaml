@@ -22,15 +22,15 @@
     network: true
     expanded: true
       
-- glances:
-    label: michaelscott
-    url: "http://{{HOMEPAGE_VAR_MICHAEL_SCOTT}}:61208"
-    version: 3
-    cpu: true
-    cputemp: true
-    mem: true
-    disk: /rootfs
-    uptime: true
-    network: true
-    expanded: true
+#- glances:
+#    label: michaelscott
+#    url: "http://{{HOMEPAGE_VAR_MICHAEL_SCOTT}}:61208"
+#    version: 3
+#    cpu: true
+#    cputemp: true
+#    mem: true
+#    disk: /rootfs
+#    uptime: true
+#    network: true
+#    expanded: true
 
