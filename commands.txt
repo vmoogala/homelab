@@ -4,5 +4,6 @@ docker ps
 
 docker compose up -d --force-recreate
 
+du -sh
 
 ss -tulpn | grep 61208
