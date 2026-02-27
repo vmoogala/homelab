@@ -2,9 +2,6 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-#- MichaelScott:
-
-
 - CosmoKramer:
     - Pi-hole:
         icon: pi-hole.png
@@ -23,7 +20,7 @@
             - unique_clients
 
     - Home Assistant:
-        icon: home-assistant.svg
+        icon: home-assistant.png
         href: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8123"
         widget:
           type: homeassistant
@@ -40,3 +37,15 @@
           key: r8DAyGl5U29yy0z9zvwCUUH5qH2BDhitqGta0qVnn2o
           version: 2
           #fields: ["users" ,"photos", "videos", "storage"]
+
+    - Jellyfin:
+        icon: jellyfin.png
+        href: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8096"
+        widget:
+          url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8096"
+          key: "{{HOMEPAGE_VAR_JELLYFIN_KEY}}"
+          version: 2
+          type: jellyfin
+          enableBlocks: true
+          enableNowPlaying: true
+          enableUser: true
