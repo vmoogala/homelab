@@ -7,7 +7,7 @@ services:
     network_mode: host
     environment:
       TZ: 'America/Toronto'
-      FTLCONF_webserver_api_password: 'Kramer'
+      FTLCONF_webserver_api_password: '${PIHOLE_TOKEN}'
       FTLCONF_dns_listeningMode: 'ALL'
       FTLCONF_misc_etc_dnsmasq_d: 'true'
     volumes:

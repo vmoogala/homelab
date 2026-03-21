@@ -19,7 +19,7 @@
             - gravity
             - unique_clients
 
-    - Home Assistant:
+    - Home-Assistant:
         icon: home-assistant.png
         href: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8123"
         widget:
@@ -49,3 +49,11 @@
           enableBlocks: true
           enableNowPlaying: true
           enableUser: true
+
+    - Tailscale:
+        icon: tailscale.png
+        href: https://login.tailscale.com/admin/machines
+        widget:
+          type: tailscale
+          deviceid: nHfVxmHy1511CNTRL
+          key: tskey-api-kLsdcdYMzB11CNTRL-ahnHBJJvHyG35F1cs4yPyGCZCExyFnD8J
