@@ -17,4 +17,4 @@ services:
       - NET_ADMIN
       - SYS_TIME
       - SYS_NICE
-    restart: unless-stopped
+    #restart: unless-stopped

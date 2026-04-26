@@ -3,21 +3,16 @@
 # https://gethomepage.dev/configs/services/
 
 - CosmoKramer:
-    - Pi-hole:
-        icon: pi-hole.png
-        href: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}/admin/"
-        description: Network-wide ad blocker
+    - Adguard-Home:
+        description: DNS filter
+        icon: adguard-home.png
+        href: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}"
         widget:
-          type: pihole
+          type: adguard
           url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}"
-          key: "{{HOMEPAGE_VAR_PIHOLE_TOKEN}}"
-          version: 6
-          fields:
-            - queries
-            - blocked
-            - blocked_percent
-            - gravity
-            - unique_clients
+          username: "{{HOMEPAGE_VAR_ADGUARD_USER}}"
+          password: "{{HOMEPAGE_VAR_ADGUARD_PWD}}"
+
 
     - Home-Assistant:
         icon: home-assistant.png
@@ -27,6 +22,7 @@
           url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8123"
           key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_TOKEN}}"
           fields: ["people_home", "lights_on", "switches_on"]
+
 
     - Immich:
         icon: immich.png
