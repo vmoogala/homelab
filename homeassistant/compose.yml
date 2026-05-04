@@ -2,12 +2,15 @@ services:
   homeassistant:
     container_name: homeassistant
     image: "ghcr.io/home-assistant/home-assistant:stable"
+    privileged: true
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
     volumes:
       - ./config:/config
       - /etc/localtime:/etc/localtime:ro
-      - /run/dbus:/run/dbus:ro
+      - /var/run/dbus:/run/dbus:ro
     restart: unless-stopped
-    privileged: true
-    network_mode: host
     environment:
-      TZ: 'America/Toronto' 
+      TZ: 'America/Toronto'

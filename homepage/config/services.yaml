@@ -6,7 +6,7 @@
     - Adguard-Home:
         description: DNS filter
         icon: adguard-home.png
-        href: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}"
+        href: "https://adguard.vamshi.ca"
         widget:
           type: adguard
           url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}"
@@ -16,7 +16,7 @@
 
     - Home-Assistant:
         icon: home-assistant.png
-        href: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8123"
+        href: "https://ha.vamshi.ca"
         widget:
           type: homeassistant
           url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8123"
@@ -26,7 +26,7 @@
 
     - Immich:
         icon: immich.png
-        href: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:2283"
+        href: "https://immich.vamshi.ca"
         widget:
           type: immich
           url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:2283"
@@ -36,7 +36,7 @@
 
     - Jellyfin:
         icon: jellyfin.png
-        href: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8096"
+        href: "https://jellyfin.vamshi.ca"
         widget:
           url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8096"
           key: "{{HOMEPAGE_VAR_JELLYFIN_KEY}}"
