@@ -30,9 +30,8 @@
         widget:
           type: immich
           url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:2283"
-          key: r8DAyGl5U29yy0z9zvwCUUH5qH2BDhitqGta0qVnn2o
+          key: "{{HOMEPAGE_VAR_IMMICH_KEY}}"
           version: 2
-          #fields: ["users" ,"photos", "videos", "storage"]
 
     - Jellyfin:
         icon: jellyfin.png
@@ -52,4 +51,13 @@
         widget:
           type: tailscale
           deviceid: nHfVxmHy1511CNTRL
-          key: tskey-api-kLsdcdYMzB11CNTRL-ahnHBJJvHyG35F1cs4yPyGCZCExyFnD8J
+          key: "{{HOMEPAGE_VAR_TAILSCALE_KEY}}"
+
+    - Cloudflare:
+        icon: cloudflare.png
+        href: https://dash.cloudflare.com
+        widget:
+          type: cloudflared
+          accountid: "{{HOMEPAGE_VAR_CF_ACCOUNT_ID}}"
+          tunnelid: "{{HOMEPAGE_VAR_CF_TUNNEL_ID}}"
+          key: "{{HOMEPAGE_VAR_CF_KEY}}"
