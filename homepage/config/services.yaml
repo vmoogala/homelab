@@ -1,7 +1,3 @@
----
-# For configuration options and examples, please see:
-# https://gethomepage.dev/configs/services/
-
 - CosmoKramer:
     - Adguard-Home:
         description: DNS filter
@@ -12,7 +8,8 @@
           url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}"
           username: "{{HOMEPAGE_VAR_ADGUARD_USER}}"
           password: "{{HOMEPAGE_VAR_ADGUARD_PWD}}"
-
+        server: my-docker
+        container: adguardhome
 
     - Home-Assistant:
         icon: home-assistant.png
@@ -22,7 +19,8 @@
           url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8123"
           key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_TOKEN}}"
           fields: ["people_home", "lights_on", "switches_on"]
-
+        server: my-docker
+        container: homeassistant
 
     - Immich:
         icon: immich.png
@@ -32,6 +30,9 @@
           url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:2283"
           key: "{{HOMEPAGE_VAR_IMMICH_KEY}}"
           version: 2
+        server: my-docker
+        container: immich_server
+        showStats: true
 
     - Jellyfin:
         icon: jellyfin.png
@@ -44,6 +45,8 @@
           enableBlocks: true
           enableNowPlaying: true
           enableUser: true
+        server: my-docker
+        container: jellyfin
 
     - Tailscale:
         icon: tailscale.png
@@ -61,3 +64,12 @@
           accountid: "{{HOMEPAGE_VAR_CF_ACCOUNT_ID}}"
           tunnelid: "{{HOMEPAGE_VAR_CF_TUNNEL_ID}}"
           key: "{{HOMEPAGE_VAR_CF_KEY}}"
+        server: my-docker
+        container: cloudflared
+
+    - Diun:
+        icon: diun.png
+        # href: https://crazymax.dev
+        description: Image Updates Tracker
+        server: my-docker
+        container: diun-diun-1

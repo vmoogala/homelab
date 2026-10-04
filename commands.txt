@@ -13,6 +13,8 @@ ss -tulpn | grep 61208
 sudo unmount /dev/sdb1
 sudo mount -a
 
+tree -a -L 2
+
 ./immich-go upload from-google-photos   --server=http://192.168.0.61:2283   --api-key=KEY   --concurrent-tasks=4   --client-timeout=120m   --pause-immich-jobs=true   --on-errors=continue   --session-tag   ./Backup-21Feb/mv-photos/takeout-*.zip
 
  ./immich-go upload from-folder   --server=http://192.168.0.61:2283   --api-key=KEY   --concurrent-tasks=8   --client-timeout=120m   --pause-immich-jobs=true   --on-errors=continue   --session-tag   ./immich/iPhone
