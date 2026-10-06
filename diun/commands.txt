@@ -1,3 +1,0 @@
-docker logs -f diun-diun-1
-
-docker exec -it diun-diun-1 diun notif test

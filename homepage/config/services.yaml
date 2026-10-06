@@ -1,5 +1,5 @@
 - CosmoKramer:
-    - Adguard-Home:
+    - Adguard Home:
         description: DNS filter
         icon: adguard-home.png
         href: "https://adguard.vamshi.ca"
@@ -11,7 +11,7 @@
         server: my-docker
         container: adguardhome
 
-    - Home-Assistant:
+    - Home Assistant:
         icon: home-assistant.png
         href: "https://ha.vamshi.ca"
         widget:
@@ -67,15 +67,18 @@
         server: my-docker
         container: cloudflared
 
-    - Diun:
-        icon: diun.png
-        # href: https://crazymax.dev
-        description: Image Updates Tracker
+    - What's Up Docker:
+        icon: mdi-docker
+        href: https://wud.vamshi.ca
+        widget:
+          type: whatsupdocker
+          url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:3003"
+          username: "{{HOMEPAGE_VAR_WUD_USER}}"
+          password: "{{HOMEPAGE_VAR_WUD_PASSWORD}}"
         server: my-docker
-        container: diun-diun-1
+        container: wud
 
-
-    - Uptime-Kuma:
+    - Uptime Kuma:
         icon: uptime-kuma
         href: https://uptime-kuma.vamshi.ca/status/default
         widget:
@@ -86,7 +89,7 @@
         server: my-docker
         container: uptime-kuma
 
-    - Stirling-PDF:
+    - Stirling PDF:
         icon: stirling-pdf.png
         href: https://pdf.vamshi.ca
         server: my-docker
