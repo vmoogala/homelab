@@ -83,3 +83,20 @@
             url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:3001"
             key: "{{HOMEPAGE_VAR_UPTIME_KUMA_KEY}}"
             slug: default
+        server: my-docker
+        container: uptime-kuma
+
+    - Stirling-PDF:
+        icon: stirling-pdf.png
+        href: https://pdf.vamshi.ca
+        server: my-docker
+        container: stirling-pdf
+        widget:
+          type: customapi
+          url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:3002/api/v1/info/status"
+          format: json
+          mappings:
+            - field: status
+              label: Status
+            - field: version
+              label: Version
