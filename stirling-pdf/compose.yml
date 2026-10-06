@@ -7,3 +7,5 @@ services:
     volumes:
       - ./stirling-data:/configs
     restart: unless-stopped
+    labels:
+      - "wud.trigger.include=stirling"

@@ -25,6 +25,8 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+    labels:
+      - "wud.trigger.include=uptime"
 
 networks:
   kuma_network:

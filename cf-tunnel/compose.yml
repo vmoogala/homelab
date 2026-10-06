@@ -5,3 +5,5 @@ services:
     restart: unless-stopped
     command: tunnel --no-autoupdate run --token ${TUNNEL_TOKEN}
     network_mode: host
+    labels:
+      - "wud.trigger.include=tunnel"

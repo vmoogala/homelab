@@ -14,3 +14,5 @@ services:
     restart: unless-stopped
     environment:
       TZ: 'America/Toronto'
+    labels:
+      - "wud.trigger.include=ha"

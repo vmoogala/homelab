@@ -11,3 +11,5 @@ services:
     environment:
       HOMEPAGE_ALLOWED_HOSTS: "192.168.50.50:3000,cosmokramer.lan:3000,homepage.vamshi.ca"
     restart: unless-stopped
+    labels:
+      - "wud.trigger.include=homepage"

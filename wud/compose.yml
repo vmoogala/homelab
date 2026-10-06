@@ -5,9 +5,48 @@ services:
     environment:
       - WUD_AUTH_ADMIN_USER=cosmo
       - WUD_AUTH_ADMIN_PASSWORD=${WUD_PASSWORD}
+
       - WUD_TRIGGER_DISCORD_LOCAL_URL=${WUD_TRIGGER_DISCORD_LOCAL_URL}
       - WUD_TRIGGER_DISCORD_LOCAL_BOTUSERNAME=${WUD_TRIGGER_DISCORD_LOCAL_BOTUSERNAME}
+      - WUD_TRIGGER_DOCKER_LOCAL_ROLLBACK=true
+
+      # All containers
+      - WUD_TRIGGER_DOCKERCOMPOSE_ADGUARD_FILE=/wud/homelab/adguard/compose.yml
+      - WUD_TRIGGER_DOCKERCOMPOSE_ADGUARD_AUTO=false
+
+      - WUD_TRIGGER_DOCKERCOMPOSE_TUNNEL_FILE=/wud/homelab/cf-tunnel/compose.yml
+      - WUD_TRIGGER_DOCKERCOMPOSE_TUNNEL_AUTO=false
+
+      - WUD_TRIGGER_DOCKERCOMPOSE_GLANCES_FILE=/wud/homelab/glances/compose.yml
+      - WUD_TRIGGER_DOCKERCOMPOSE_GLANCES_AUTO=false
+
+      - WUD_TRIGGER_DOCKERCOMPOSE_HA_FILE=/wud/homelab/homeassistant/compose.yml
+      - WUD_TRIGGER_DOCKERCOMPOSE_HA_AUTO=false
+
+      - WUD_TRIGGER_DOCKERCOMPOSE_HOMEPAGE_FILE=/wud/homelab/homepage/compose.yml
+      - WUD_TRIGGER_DOCKERCOMPOSE_HOMEPAGE_AUTO=false
+
+      #- WUD_TRIGGER_DOCKERCOMPOSE_IMMICH_FILE=/wud/homelab/immich-app/compose.yml
+      #- WUD_TRIGGER_DOCKERCOMPOSE_IMMICH_AUTO=true
+
+      - WUD_TRIGGER_DOCKERCOMPOSE_JELLYFIN_FILE=/wud/homelab/jellyfin/compose.yml
+      - WUD_TRIGGER_DOCKERCOMPOSE_JELLYFIN_AUTO=false
+
+      - WUD_TRIGGER_DOCKERCOMPOSE_STIRLING_FILE=/wud/homelab/stirling-pdf/compose.yml
+      - WUD_TRIGGER_DOCKERCOMPOSE_STIRLING_AUTO=false
+
+      - WUD_TRIGGER_DOCKERCOMPOSE_UPTIME_FILE=/wud/homelab/uptime-kuma/compose.yml
+      - WUD_TRIGGER_DOCKERCOMPOSE_UPTIME_AUTO=false
+
+      # Autoupdate for WUD itself
+      - WUD_TRIGGER_DOCKERCOMPOSE_WUD_FILE=/wud/homelab/wud/compose.yml
+      - WUD_TRIGGER_DOCKERCOMPOSE_WUD_AUTO=true
+
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./wud-data:/store
+      - /home/cosmo/homelab:/wud/homelab
     ports:
       - 3003:3000
+    labels:
+      - "wud.trigger.include=wud"

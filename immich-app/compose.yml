@@ -31,6 +31,8 @@ services:
     restart: always
     healthcheck:
       disable: false
+    labels:
+      - "wud.trigger.include=immich"
 
   immich-machine-learning:
     container_name: immich_machine_learning
@@ -47,6 +49,8 @@ services:
     restart: always
     healthcheck:
       disable: false
+    labels:
+      - "wud.trigger.include=immich"
 
   redis:
     container_name: immich_redis
@@ -54,6 +58,8 @@ services:
     healthcheck:
       test: redis-cli ping || exit 1
     restart: always
+    labels:
+      - "wud.trigger.include=immich"
 
   database:
     container_name: immich_postgres
@@ -72,6 +78,8 @@ services:
     restart: always
     healthcheck:
       disable: false
+    labels:
+      - "wud.trigger.include=immich"
 
 volumes:
   model-cache:

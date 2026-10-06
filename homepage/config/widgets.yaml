@@ -13,7 +13,7 @@
 - glances:
     label: cosmokramer
     url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:61208"
-    version: 3
+    version: 4
     cpu: true
     cputemp: true
     mem: true
@@ -21,7 +21,7 @@
     uptime: true
     network: true
     expanded: true
-      
+
 #- glances:
 #    label: michaelscott
 #    url: "http://{{HOMEPAGE_VAR_MICHAEL_SCOTT}}:61208"

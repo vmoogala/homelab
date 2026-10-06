@@ -7,4 +7,6 @@ services:
     volumes:
       - './data/adguard-home/work:/opt/adguardhome/work'
       - './data/adguard-home/confdir:/opt/adguardhome/conf'
+    labels:
+      - "wud.trigger.include=adguard"
 
