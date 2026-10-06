@@ -8,6 +8,9 @@ docker rm -f
 
 du -sh
 
+tailscale up --advertise-exit-node
+systemctl is-enabled tailscaled
+
 ss -tulpn | grep 61208
 
 sudo unmount /dev/sdb1

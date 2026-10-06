@@ -73,3 +73,13 @@
         description: Image Updates Tracker
         server: my-docker
         container: diun-diun-1
+
+
+    - Uptime-Kuma:
+        icon: uptime-kuma
+        href: https://uptime-kuma.vamshi.ca/status/default
+        widget:
+            type: uptimekuma
+            url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:3001"
+            key: "{{HOMEPAGE_VAR_UPTIME_KUMA_KEY}}"
+            slug: default
