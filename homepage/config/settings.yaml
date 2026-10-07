@@ -5,3 +5,21 @@
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
+
+layout:
+  Network:
+    icon: mdi-network-outline-#00E676
+    style: row
+    columns: 4
+  Monitoring:
+    icon: mdi-heart-pulse-#FF1744
+    style: row
+    columns: 4
+  Media:
+    icon: mdi-play-circle-outline-#AA00FF
+    style: row
+    columns: 4
+  Other:
+    icon: mdi-dots-horizontal-#FF9100
+    style: row
+    columns: 4

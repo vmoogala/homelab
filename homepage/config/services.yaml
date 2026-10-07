@@ -1,4 +1,4 @@
-- CosmoKramer:
+- Network:
     - Adguard Home:
         description: DNS filter
         icon: adguard-home.png
@@ -11,17 +11,51 @@
         server: my-docker
         container: adguardhome
 
-    - Home Assistant:
-        icon: home-assistant.png
-        href: "https://ha.vamshi.ca"
+    - Tailscale:
+        icon: tailscale.png
+        href: https://login.tailscale.com/admin/machines
         widget:
-          type: homeassistant
-          url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8123"
-          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_TOKEN}}"
-          fields: ["people_home", "lights_on", "switches_on"]
-        server: my-docker
-        container: homeassistant
+          type: tailscale
+          deviceid: nHfVxmHy1511CNTRL
+          key: "{{HOMEPAGE_VAR_TAILSCALE_KEY}}"
 
+    - Cloudflare:
+        icon: cloudflare.png
+        href: https://dash.cloudflare.com
+        widget:
+          type: cloudflared
+          accountid: "{{HOMEPAGE_VAR_CF_ACCOUNT_ID}}"
+          tunnelid: "{{HOMEPAGE_VAR_CF_TUNNEL_ID}}"
+          key: "{{HOMEPAGE_VAR_CF_KEY}}"
+        server: my-docker
+        container: cloudflared
+
+
+- Monitoring:
+    - What's Up Docker:
+        icon: mdi-docker
+        href: https://wud.vamshi.ca
+        widget:
+          type: whatsupdocker
+          url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:3003"
+          username: "{{HOMEPAGE_VAR_WUD_USER}}"
+          password: "{{HOMEPAGE_VAR_WUD_PASSWORD}}"
+        server: my-docker
+        container: wud
+
+    - Uptime Kuma:
+        icon: uptime-kuma
+        href: https://status.vamshi.ca/status/default
+        widget:
+            type: uptimekuma
+            url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:3001"
+            key: "{{HOMEPAGE_VAR_UPTIME_KUMA_KEY}}"
+            slug: default
+        server: my-docker
+        container: uptime-kuma
+
+
+- Media:
     - Immich:
         icon: immich.png
         href: "https://immich.vamshi.ca"
@@ -48,46 +82,18 @@
         server: my-docker
         container: jellyfin
 
-    - Tailscale:
-        icon: tailscale.png
-        href: https://login.tailscale.com/admin/machines
-        widget:
-          type: tailscale
-          deviceid: nHfVxmHy1511CNTRL
-          key: "{{HOMEPAGE_VAR_TAILSCALE_KEY}}"
 
-    - Cloudflare:
-        icon: cloudflare.png
-        href: https://dash.cloudflare.com
+- Other:
+    - Home Assistant:
+        icon: home-assistant.png
+        href: "https://ha.vamshi.ca"
         widget:
-          type: cloudflared
-          accountid: "{{HOMEPAGE_VAR_CF_ACCOUNT_ID}}"
-          tunnelid: "{{HOMEPAGE_VAR_CF_TUNNEL_ID}}"
-          key: "{{HOMEPAGE_VAR_CF_KEY}}"
+          type: homeassistant
+          url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:8123"
+          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_TOKEN}}"
+          fields: ["people_home", "lights_on", "switches_on"]
         server: my-docker
-        container: cloudflared
-
-    - What's Up Docker:
-        icon: mdi-docker
-        href: https://wud.vamshi.ca
-        widget:
-          type: whatsupdocker
-          url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:3003"
-          username: "{{HOMEPAGE_VAR_WUD_USER}}"
-          password: "{{HOMEPAGE_VAR_WUD_PASSWORD}}"
-        server: my-docker
-        container: wud
-
-    - Uptime Kuma:
-        icon: uptime-kuma
-        href: https://uptime-kuma.vamshi.ca/status/default
-        widget:
-            type: uptimekuma
-            url: "http://{{HOMEPAGE_VAR_COSMO_KRAMER}}:3001"
-            key: "{{HOMEPAGE_VAR_UPTIME_KUMA_KEY}}"
-            slug: default
-        server: my-docker
-        container: uptime-kuma
+        container: homeassistant
 
     - Stirling PDF:
         icon: stirling-pdf.png
@@ -103,3 +109,4 @@
               label: Status
             - field: version
               label: Version
+
